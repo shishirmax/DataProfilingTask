@@ -1,0 +1,2344 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{D51D42CC-0A39-4278-9D8A-D6ACAA8A894E}" Name="EmailResults">
+      <DtsConnectionManagerID>EmailResults</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0CD14C86-77A6-4E8E-888D-A208109EF663}" Name="ProfilingTaskEmailResults.xml">
+      <DtsConnectionManagerID>ProfilingTaskEmailResults.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DB5E4F45-569B-4478-95A4-12C88B812754}" Name="ProfilingTaskSales.xml">
+      <DtsConnectionManagerID>ProfilingTaskSales.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{A1EDA333-079A-412A-AF92-F8BA70DDA08E}" Name="ProfilingTaskWebsiteData.xml">
+      <DtsConnectionManagerID>ProfilingTaskWebsiteData.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{E5565CBA-62AE-41ED-822F-DF7BDD83367D}" Name="PtofilerResultSales.xml">
+      <DtsConnectionManagerID>PtofilerResultSales.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{2C20B698-66A4-402F-8812-00AFF8B7E987}" Name="SHISHIRS.EdinaLocal 1">
+      <DtsConnectionManagerID>SHISHIRS.EdinaLocal 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D3667F4A-B05C-4581-AD94-5E34ED5DD483}" Name="tblEmailResults.xml">
+      <DtsConnectionManagerID>tblEmailResults.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{F3810A7B-18F9-4BD1-93B5-252032928381}" Name="tblWebSiteData.xml">
+      <DtsConnectionManagerID>tblWebSiteData.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{386E318F-B33D-4A5A-A245-517C9C8AA4D6}" Name="WebsiteDataProfiler">
+      <DtsConnectionManagerID>WebsiteDataProfiler</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Sales" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Sales" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Sales" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Sales" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Sales" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Sales" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Sales" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq1">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Website-Data" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq1">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Website-Data" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq1">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Website-Data" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq1">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Website-Data" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq1">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Website-Data" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq1">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Website-Data" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq1">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="Website-Data" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq2">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="EmailResults" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq2">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="EmailResults" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq2">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="EmailResults" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq2">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="EmailResults" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq2">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="EmailResults" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq2">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="EmailResults" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq2">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="EmailResults" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblWebsiteData" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table Schema="dbo" Table="tblEmailResults_24102017" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="-1" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="MdmContactId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="LastName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>85762</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="FirstName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>102380</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="IsActive" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="Email" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>14013</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="CampaignName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>186946</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="Result" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="ResultDate" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>1669600</MaxValue>
+        <Mean>834800.5</Mean>
+        <StdDev>481972.004720617</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2017-09-19T13:13:31.6730000</MinValue>
+        <MaxValue>2017-09-19T13:13:31.6730000</MaxValue>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <KeyColumns>
+          <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1669600</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-09-19T13:13:31.6730000</Value>
+            <Count>1669600</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults" RowCount="1669600" />
+        <DeterminantColumns>
+          <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="-1" />
+        <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="-1" />
+        <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="ListingId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="CreatedDate" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="Rating" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>364150</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="Type" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="WebsiteUserId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="LastName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1976</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="FirstName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1974</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="Email" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>3095</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="PhoneNumber" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>740973</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq4" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>844867</MaxValue>
+        <Mean>422434</Mean>
+        <StdDev>243892.094938747</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2017-09-18T16:43:52.8100000</MinValue>
+        <MaxValue>2017-09-18T16:43:52.8100000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="ListingId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="CreatedDate" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="Rating" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>364150</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="Type" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="WebsiteUserId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="LastName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1976</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="FirstName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1974</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="Email" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>3095</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="PhoneNumber" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>740973</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq5" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>844867</MaxValue>
+        <Mean>422434</Mean>
+        <StdDev>243892.094938747</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2017-09-18T16:43:52.8100000</MinValue>
+        <MaxValue>2017-09-18T16:43:52.8100000</MaxValue>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <KeyColumns>
+          <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>844867</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <KeyColumns>
+          <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>844867</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq5">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-09-18T16:43:52.8100000</Value>
+            <Count>844867</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq4">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-09-18T16:43:52.8100000</Value>
+            <Count>844867</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <DeterminantColumns>
+          <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblWebsiteData" RowCount="844867" />
+        <DeterminantColumns>
+          <Column Name="WebsiteDataId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="-1" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="-1" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="-1" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="MdmContactId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="LastName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>691248</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="FirstName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>815860</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="IsActive" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="Email" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>220125</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="CampaignName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>877828</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="Result" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ResultDate" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq6" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>8424034</MaxValue>
+        <Mean>4212017.5</Mean>
+        <StdDev>2431809.14878903</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2017-10-25T12:50:57.3730000</MinValue>
+        <MaxValue>2017-10-25T12:50:57.3730000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="MdmContactId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="LastName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>691248</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="FirstName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>815860</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="IsActive" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="Email" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>220125</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="CampaignName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>877828</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="Result" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ResultDate" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq7" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>8424034</MaxValue>
+        <Mean>4212017.5</Mean>
+        <StdDev>2431809.14878903</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2017-10-25T12:50:57.3730000</MinValue>
+        <MaxValue>2017-10-25T12:50:57.3730000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="MdmContactId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="LastName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>691248</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="FirstName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>815860</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="IsActive" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="Email" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>220125</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="CampaignName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>877828</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="Result" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ResultDate" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq8" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>8424034</MaxValue>
+        <Mean>4212017.5</Mean>
+        <StdDev>2431809.14878903</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2017-10-25T12:50:57.3730000</MinValue>
+        <MaxValue>2017-10-25T12:50:57.3730000</MaxValue>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <KeyColumns>
+          <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>8424034</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <KeyColumns>
+          <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>8424034</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <KeyColumns>
+          <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>8424034</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq8">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-10-25T12:50:57.3730000</Value>
+            <Count>8424034</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq7">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-10-25T12:50:57.3730000</Value>
+            <Count>8424034</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq6">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-10-25T12:50:57.3730000</Value>
+            <Count>8424034</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <DeterminantColumns>
+          <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <DeterminantColumns>
+          <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="tblEmailResults_24102017" RowCount="8424034" />
+        <DeterminantColumns>
+          <Column Name="EmailResultsId" SqlDbType="BigInt" MaxLength="0" Precision="19" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="RecordIDs" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Company" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Prefix" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="First" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>3</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Middle" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>93984</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Last" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>3</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BuyerEmail" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>71790</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Suffix" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Title" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PROPERTY_INDICATOR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="MUNICIPALITY_NAME" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="OWNER_CORPORATE_INDICATOR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="LAND_USE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="OWNER_NAME" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="OWNER_NAME_2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="OWNER_NAME_3" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ABSENTEE_OWNER" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Address" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="City" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>2</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="State" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>3</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Zip" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Zip4" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Latitude" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>338</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="Longitude" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>340</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SCF" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ADDRESS_INDICATOR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HOUSE_NUMBER_PREFIX" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HOUSE_NUMBER" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HOUSE_NUMBER_SUFFIX" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="DIRECTION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="STREET_NAME" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>49</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="MODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="QUADRANT" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="CARRIER_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HOUSE_NUMBER_PREFIX2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HOUSE_NUMBER2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HOUSE_NUMBER_SUFFIX2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="DIRECTION2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="STREET_NAME2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="MODE2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="QUADRANT2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="CARRIER_CODE2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="APT_UNIT_NUMBER2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="CITY2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="STATE2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ZIP_CODE2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="TOTAL_VALUE_CALCULATED" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="LAND_VALUE_CALCULATED" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="IMPROVEMENT_VALUE_CALCULATED" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="TOTAL_VALUE_CALCULATED_IND" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="LAND_VALUE_CALCULATED_IND" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="IMPROVEMENT_VALUE_CALCULATED_IND" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ASSD_TOTAL_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ASSD_LAND_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ASSD_IMPROVEMENT_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ASSD_YEAR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="MKT_TOTAL_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="MKT_LAND_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="MKT_IMPROVEMENT_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="APPR_TOTAL_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="APPR_LAND_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="APPR_IMPROVEMENT_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="TAX_AMOUNT" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>2325</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="TAX_YEAR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>2535</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="DOCUMENT_YEAR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SALES_DEED_CATEGORY_TYPE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="RECORDING_DATE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SALE_DATE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SALE_PRICE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SALE_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SELLER_NAME" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SellerEmail" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>105511</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SALES_TRANSACTION_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="RESIDENTIAL_MODEL_INDICATOR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PRIOR_DOCUMENT_YEAR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PRIOR_SLS_DEED_CATEGORY_TYPE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PRIOR_RECORDING_DATE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PRIOR_SALE_DATE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PRIOR_SALE_PRICE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PRIOR_SALE_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PRIOR_DEED_TYPE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FRONT_FOOTAGE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="DEPTH_FOOTAGE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ACRES" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>25651</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="LAND_SQUARE_FOOTAGE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="UNIVERSAL_BUILDING_SQUARE_FEET" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BUILDING_SQUARE_FEET_IND" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BUILDING_SQUARE_FEET" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="LIVING_SQUARE_FEET" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>6485</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="GROUND_FLOOR_SQUARE_FEET" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>8780</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="GROSS_SQUARE_FEET" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ADJUSTED_GROSS_SQUARE_FEET" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BASEMENT_SQUARE_FEET" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="GARAGE_PARKING_SQUARE_FEET" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="YEAR_BUILT" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>5719</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="EFFECTIVE_YEAR_BUILT" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BEDROOMS" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>5775</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="TOTAL_ROOMS" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134286</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="TOTAL_BATHS_CALCULATED" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="TOTAL_BATHS" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>5864</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FULL_BATHS" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>8395</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HALF_BATHS" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>88824</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="QTR_BATHS1" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>131643</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="QTR_BATHS3" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>71800</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BATH_FIXTURES" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="AIR_CONDITIONING" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>4769</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BASEMENT_FINISH" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BLDG_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="BLDG_IMPV_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="CONDITION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="CONSTRUCTION_TYPE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>127433</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="EXTERIOR_WALLS" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>10368</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FIREPLACE_IND" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FIREPLACE_NUMBER" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>66234</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FIREPLACE_TYPE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FOUNDATION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>132540</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FLOOR" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FRAME" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="GARAGE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>41014</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HEATING" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>34852</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="MOBILE_HOME_IND" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PARKING_SPACES" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>123212</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="PARKING_TYPE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="POOL" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="POOL_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="QUALITY" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ROOF_COVER" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ROOF_TYPE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>28513</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="STORIES_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="STORIES_NUMBER" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>80133</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="STYLE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>3855</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="UNITS_NUMBER" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ELECTRIC_ENERGY" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="FUEL" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SEWER" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>7408</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="WATER" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>6625</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="OWNER_OWNERSHIP_RIGHTS_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SUBDIVISION_NAME" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>93155</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HOMESTEAD_EXEMPT2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="VETERANS_EXEMPTION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="DISABLED_EXEMPTION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="WIDOW_EXEMPTION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="AGED_EXEMPTION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="CONSTRUCTION_CD" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="STYLE_CODE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SELLER_CARRY_BACK" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SITUS_LATITUDE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SITUS_LONGITUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="LOAN_TO_VALUE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="CENSUS_TRACT" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ZONING" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>9216</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="RANGE" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="TOWNSHIP" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="SECTION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="QUARTER_SECTION" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="HOMESTEAD_EXEMPT1" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="COUNTY_USE_1" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="COUNTY_USE_2" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="NUMBER_OF_BUILDINGS" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>134336</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Sales" RowCount="134336" />
+        <Column Name="ListingId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="ListingId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="CreatedDate" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="Rating" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>389880</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="Type" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="WebsiteUserId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="LastName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>2034</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="FirstName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>2032</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="Email" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>3306</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="Website-Data" RowCount="938194" />
+        <Column Name="PhoneNumber" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>826319</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="EmailResults" RowCount="8424034" />
+        <Column Name="MdmContactId" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="EmailResults" RowCount="8424034" />
+        <Column Name="LastName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>691248</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="EmailResults" RowCount="8424034" />
+        <Column Name="FirstName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>815860</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="EmailResults" RowCount="8424034" />
+        <Column Name="IsActive" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="EmailResults" RowCount="8424034" />
+        <Column Name="Email" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>220125</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="EmailResults" RowCount="8424034" />
+        <Column Name="CampaignName" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>877828</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="EmailResults" RowCount="8424034" />
+        <Column Name="Result" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{2C20B698-66A4-402F-8812-00AFF8B7E987}</DataSourceID>
+        <Table DataSource="SHISHIRS" Database="EdinaLocal" Schema="dbo" Table="EmailResults" RowCount="8424034" />
+        <Column Name="ResultDate" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

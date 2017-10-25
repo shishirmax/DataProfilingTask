@@ -1,18 +1,18 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="9/19/2017 12:15:08 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SHISHIRS"
   DTS:CreatorName="CONTATAN\shishir"
-  DTS:DTSID="{646D3D87-D4C3-47D9-9EA3-B557E46F23B6}"
+  DTS:DTSID="{9DF244F4-26B0-4C4E-948C-0ED3E091EB8F}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="14.0.0800.90"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="ProfilingTask_EdinaData"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{331B6404-C530-4BA9-98A8-3E4737A499F8}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{0ADAEA2F-5803-4FFD-A947-C15D4261B333}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -136,7 +136,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task Email Results"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2017 RC1; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
@@ -728,7 +728,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task Sales"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2017 RC1; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
@@ -821,7 +821,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task Website Data"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2017 RC1; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
