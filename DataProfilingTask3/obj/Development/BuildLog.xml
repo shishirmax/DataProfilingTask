@@ -2,13 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>DataProfilingTask3</Name>
-    <LastWriteTime>2017-10-25T11:05:38.998498Z</LastWriteTime>
+    <LastWriteTime>2017-12-11T07:02:09.6527523Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Package.dtsx</Name>
-      <LastWriteTime>2017-10-25T11:19:11.9568004Z</LastWriteTime>
+      <Name>ProfilingTask_EdinaData.dtsx</Name>
+      <LastWriteTime>2017-10-25T11:53:29.6184351Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>eCRV_Profiling.dtsx</Name>
+      <LastWriteTime>2017-11-13T10:41:09.1992486Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>HomeSpotter.dtsx</Name>
+      <LastWriteTime>2017-12-11T07:03:42.8297523Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
